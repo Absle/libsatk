@@ -8,7 +8,7 @@ export PBUILD_MODE="Debug" # must be either "Debug" or "Release"
 
 # useful shortcuts
 alias root='cd $PROOT'
-alias build='cd $PBUILD_DIR/$PBUILD_MODE && cmake "$PROOT" && make'
+alias build='cd $PBUILD_DIR/$PBUILD_MODE && cmake -DCMAKE_BUILD_TYPE=$PBUILD_MODE "$PROOT" && make'
 alias cdbuild='cd $PBUILD_DIR/$PBUILD_MODE'
 alias debug='export PBUILD_MODE="Debug" && build'
 alias release='export PBUILD_MODE="Release" && build'
