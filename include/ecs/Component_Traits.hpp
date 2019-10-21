@@ -1,7 +1,7 @@
 #ifndef SATK_COMPONENT_TRAITS_HPP
 #define SATK_COMPONENT_TRAITS_HPP
 
-#include "Common.hpp"
+#include "common/Common.hpp"
 
 namespace Satk
 {

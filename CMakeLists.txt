@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
 
 project(
-    libsatk
+    satk
     VERSION 0.1.0.0
     LANGUAGES CXX
 )
@@ -9,20 +9,20 @@ project(
 include(GNUInstallDirs)
 
 add_library(
-    libsatk
+    satk
     src/ecs/Ecs.cpp
+    src/ecs/Component_Manager.cpp
 )
 
 target_include_directories(
-    libsatk
-    PUBLIC include/common
-    PUBLIC include/ecs
+    satk
+    PUBLIC include
     PRIVATE src/common
     PRIVATE src/ecs
 )
 
 set_target_properties(
-    libsatk PROPERTIES
+    satk PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED YES
 )
